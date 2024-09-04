@@ -9,7 +9,8 @@ import React from 'react';
 */
 function page() {
   return (
-    <div>page</div>
+    //We will have acces to our dynamic "postId" variable
+    <div>{postId}</div>
   )
 }
 

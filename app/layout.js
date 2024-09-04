@@ -1,6 +1,9 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 
+//Layout page can be used to render footers and navigation bars in every page.
+
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {

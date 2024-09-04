@@ -1,3 +1,10 @@
+                            //NOTES
+
+/*
+    Main page that will be rendered under the path:
+    /
+*/
+
 
 /* 
 - By default, NextJS renders components on the server. In order to switch to client-side rendering, 
@@ -8,12 +15,53 @@ the following code needs to be added at the top of the page.js file
 */
 //
 
-import Image from "next/image";
 
 /*
-    Main page that will be rendered under the path:
-    /
+- DATA FETCHING
+  1. Server Side Rendering (SSR)
+    - Dynamic rendered data that is fetched fresh upon each request
+    - Each request to the server triggers a new rendering cycle
+    - { cache: 'no store'} // call data but do not store it just render.
+    - Ideal for content that changes frequently
+
+  2. Static Side Generation(SSG)
+    - Request with wout { cache: 'no store'}
+    - fetched content will be stores
+    - Ideal for data that doesn't change frequently
+
+  3. Incremental Static Generation(ISG)
+    - { next: { revalidate: 10 } } 
+    - Combines the benefits of SSR and SSG for dynamic content in static sites
+    - Specify what data can be statically fetched at build time,
+      while defining a revalidation time interval "10" // data will be "cached" but after a specific time-frame(10) will be refreshed
+
 */
+
+/*
+-  SEO/METADATA
+ - Metadata is information about other data.
+ - It gives context to the actual data we are working with:
+  - In a photo: format, data pic was taken, etc
+  - Docs: author, date, size, etc
+
+ 1. Static
+  - export const metadata = {
+    title: 'Home',
+  };
+     //output: <head> <>title>HOME</title> </head>
+ 2. Dynamic 
+                          
+
+
+*/
+
+
+
+
+
+
+
+import Image from "next/image";
 
 
 

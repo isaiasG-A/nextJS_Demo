@@ -1,4 +1,22 @@
+
+/* 
+- By default, NextJS renders components on the server. In order to switch to client-side rendering, 
+the following code needs to be added at the top of the page.js file
+  - "use client"
+- We can mix the 2 types of componenets(server side and client side) in order to decrease loading times and make our applications more user friendly
+  as well as improving SEO  
+*/
+//
+
 import Image from "next/image";
+
+/*
+    Main page that will be rendered under the path:
+    /
+*/
+
+
+
 
 export default function Home() {
   return (
